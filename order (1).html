@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+    --primary-color: #222; /* Black for premium bag brand look */
+    --accent-color: #d4af37; /* Gold touch */
+    --bg-light: #f9f9f9;
+}
+
+.checkout-wrapper {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.checkout-card {
+    background: #ffffff;
+    max-width: 500px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.checkout-header h2 {
+    margin: 0;
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+.checkout-header p {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box; /* Fix for padding */
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: var(--primary-color);
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.payment-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.pay-option {
+    border: 1px solid #ddd;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+}
+
+.pay-option:has(input:checked) {
+    border-color: var(--primary-color);
+    background: #f0f0f0;
+}
+
+.order-btn {
+    width: 100%;
+    padding: 16px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: transform 0.2s;
+}
+
+.order-btn:hover {
+    transform: translateY(-2px);
+    background: #333;
+}
+
+.trust-note {
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+    margin-top: 15px;
+}
+button{
+    width: 180px;
+    border: 1px solid;
+    border-radius: 10px;
+    height: 45px;
+}
+button a{
+    color: black;
+      font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 14px;
+    text-decoration: none;
+}
+    </style>
+</head>
+<body>
+    <div class="checkout-wrapper">
+    <div class="checkout-card">
+        <div class="checkout-header">
+            <h2>Complete Your Order</h2>
+            <p>Fast & Secure Checkout</p>
+        </div>
+
+        <form class="checkout-form">
+            <div class="input-group">
+                <label>Contact Information</label>
+                <input type="email" placeholder="Email Address" required>
+            </div>
+
+            <div class="input-group">
+                <label>Shipping Address</label>
+                <input type="text" placeholder="Full Name" required>
+                <input type="text" placeholder="House No, Street, Area" required>
+                <div class="row">
+                    <input type="text" placeholder="City" required>
+                    <input type="text" placeholder="Postal Code" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Payment Method</label>
+                <div class="payment-grid">
+                    <label class="pay-option">
+                        <input type="radio" name="payment" checked>
+                        <span>Cash on Delivery</span>
+                    </label>
+                   
+                       <button><a href="./payment.html"><input type="radio" name="payment">Card Payment</a></button>
+            
+                </div>
+            </div>
+
+            <button type="submit" class="order-btn">Place Order </button>
+            <p class="trust-note">🔒 Encrypted & Secure Checkout</p>
+        </form>
+    </div>
+</div>
+</body>
+</html>

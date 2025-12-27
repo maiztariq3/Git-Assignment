@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    border-radius: 10px;
+}
+
+.logincontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.logincontainer:hover{
+          box-shadow: 3px 5px 10px 4px rgb(59, 50, 50);
+          transform: translateY(-5s);
+}
+.form{
+    background-color:cadetblue;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 400px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #050505;
+}
+
+input{
+    margin-bottom: 20px;
+}
+
+ label {
+    display: block;
+    margin-bottom: 5px;
+    color: #000000;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #000000;
+    outline: none;
+}
+
+
+
+ input {
+    margin-right: 10px;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
+}
+.forget-password{
+    margin: 10px;
+    margin-left: 200px;
+}
+p {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+p a {
+    color: #1622d4;
+    text-decoration: underline;
+    
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+  /* medium screens (like tablets) */
+    @media (min-width:601px) and (max-width:1024px) {
+        body{
+            background-color: orange;
+        }
+        h1{
+            color: black;
+            font-size: 30px
+        }
+    }
+    /* large screens(desktops) */
+    @media  (min-width: 1025) {
+        body{
+            background-color:cadetblue;
+        }
+        h1{
+            color: blueviolet;
+            font-size: 40px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="logincontainer">
+        <div class="form">
+    <h1>Login</h1>
+    <form onclick="login">
+        <label >Username</label>
+        <input type="text" name="username" id="user" placeholder="Enter your username" required><br><br>
+        <label >Password</label>
+        <input type="password" name="password" id="pass" placeholder="Enter your password" required>
+         <div class="forget-password">
+          <a href="#">Forgot Password?</a>
+        </div>
+        <button type="submit" class="login-btn">Login</button>
+    </form>
+    <div>
+        <p>For Sign-up  <a href="./singup.html">Sign-up</a></p>
+       </div>
+    </div>
+    </div>
+</body>
+</html>

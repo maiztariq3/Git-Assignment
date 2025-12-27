@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aura Watches</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body { font-family: Arial, sans-serif; }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+            url("https://images.unsplash.com/photo-1523275335684-37898b6baf30") center/cover;
+            height: 90vh;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        /* CARDS */
+        .card img {
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card {
+            transition: .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        footer a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Aura Watches</a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="nav" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#products" class="nav-link">Products</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+    <div class="container text-center">
+        <h1 class="display-4">Premium Aura Watches</h1>
+        <p>Luxury • Style • Precision</p>
+        <a href="#products" class="btn btn-warning">Shop Now</a>
+    </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="container my-5">
+    <h2 class="text-center mb-4">Our Collection</h2>
+
+    <!-- FILTER BUTTONS -->
+    <div class="text-center mb-4">
+        <button class="btn btn-dark m-1" onclick="filterCards('all')">All</button>
+        <button class="btn btn-dark m-1" onclick="filterCards('men')">Men</button>
+        <button class="btn btn-dark m-1" onclick="filterCards('women')">Women</button>
+        <button class="btn btn-dark m-1" onclick="filterCards('luxury')">Luxury</button>
+        <button class="btn btn-dark m-1" onclick="filterCards('sport')">Sport</button>
+    </div>
+
+    <!-- CARDS -->
+    <div class="row g-4">
+
+        <div class="col-md-3 card-box" data-category="men">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30">
+                <div class="card-body text-center">
+                    <h5>Men Classic</h5>
+                    <p>Rs 12,999</p>
+                    <button class="btn btn-warning">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 card-box" data-category="luxury">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1519744792095-2f2205e87b6f">
+                <div class="card-body text-center">
+                    <h5>Royal Gold</h5>
+                    <p>Rs 18,999</p>
+                    <button class="btn btn-warning">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 card-box" data-category="women">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d">
+                <div class="card-body text-center">
+                    <h5>Women Silver</h5>
+                    <p>Rs 11,499</p>
+                    <button class="btn btn-warning">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 card-box" data-category="sport">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d">
+                <div class="card-body text-center">
+                    <h5>Sport Pro</h5>
+                    <p>Rs 14,999</p>
+                    <button class="btn btn-warning">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 card-box" data-category="men">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c">
+                <div class="card-body text-center">
+                    <h5>Leather Brown</h5>
+                    <p>Rs 10,999</p>
+                    <button class="btn btn-warning">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 card-box" data-category="women">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1519744346363-d4fd6cdb1a80">
+                <div class="card-body text-center">
+                    <h5>Rose Gold</h5>
+                    <p>Rs 13,499</p>
+                    <button class="btn btn-warning">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 card-box" data-category="luxury">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa">
+                <div class="card-body text-center">
+                    <h5>Luxury Black</h5>
+                    <p>Rs 22,999</p>
+                    <button class="btn btn-warning">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 card-box" data-category="sport">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba6">
+                <div class="card-body text-center">
+                    <h5>Digital Sport</h5>
+                    <p>Rs 9,999</p>
+                    <button class="btn btn-warning">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Contact Us</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <input class="form-control mb-3" placeholder="Your Name">
+                <input class="form-control mb-3" placeholder="Your Email">
+                <textarea class="form-control mb-3" rows="4" placeholder="Message"></textarea>
+                <button class="btn btn-warning w-100">Send</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-center text-light py-4">
+    <p>© 2025 Aura Watches | All Rights Reserved</p>
+</footer>
+
+<!-- JS -->
+<script>
+function filterCards(category) {
+    let cards = document.querySelectorAll('.card-box');
+    cards.forEach(card => {
+        card.style.display = (category === 'all' || card.dataset.category === category)
+            ? "block" : "none";
+    });
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
